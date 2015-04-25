@@ -19,6 +19,29 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
+    @IBOutlet weak var redColor: UISlider!
+    
+    @IBOutlet weak var greenColor: UISlider!
+    
+    @IBOutlet weak var blueColor: UISlider!
+    
+    @IBOutlet weak var colorView: UIView!
+    
+    
+    @IBAction func colorChange(sender: UISlider) {
+        
+        let r: CGFloat = CGFloat(self.redColor.value)
+        let g: CGFloat = CGFloat(self.greenColor.value)
+        let b: CGFloat = CGFloat(self.blueColor.value)
+        
+        colorView.backgroundColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        
+    }
+    
+    
+    
 
 
 }
